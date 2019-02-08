@@ -1,4 +1,4 @@
-package com.mapp.platform.productservice.bean.dto;
+package com.moulika.platform.productservice.bean.dto;
 
 import io.swagger.annotations.ApiModelProperty;
 
