@@ -1,4 +1,4 @@
-package com.mapp.platform.productservice.service;
+package com.moulika.platform.productservice.service;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
@@ -6,11 +6,11 @@ import static org.junit.Assert.assertTrue;
 import static org.mockito.Mockito.doNothing;
 import static org.mockito.Mockito.when;
 
-import com.mapp.platform.productservice.bean.CampaignOwnerProduct;
-import com.mapp.platform.productservice.bean.OwnerProduct;
-import com.mapp.platform.productservice.exception.ProductServiceException;
+import com.moulika.platform.productservice.bean.CampaignOwnerProduct;
+import com.moulika.platform.productservice.bean.OwnerProduct;
+import com.moulika.platform.productservice.exception.ProductServiceException;
 
-import com.mapp.platform.productservice.repository.CampaignOwnerProductRepository;
+import com.moulika.platform.productservice.repository.CampaignOwnerProductRepository;
 import java.util.ArrayList;
 import java.util.List;
 import org.junit.Before;

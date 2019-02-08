@@ -1,10 +1,10 @@
-package com.mapp.platform.productservice.controller;
+package com.moulika.platform.productservice.controller;
 
-import com.mapp.platform.productservice.bean.ProductSegment;
-import com.mapp.platform.productservice.exception.ErrorResponse;
-import com.mapp.platform.productservice.exception.ProductServiceException;
-import com.mapp.platform.productservice.service.ProductSegmentService;
-import com.mapp.platform.productservice.bean.ProductFamily;
+import com.moulika.platform.productservice.bean.ProductSegment;
+import com.moulika.platform.productservice.exception.ErrorResponse;
+import com.moulika.platform.productservice.exception.ProductServiceException;
+import com.moulika.platform.productservice.service.ProductSegmentService;
+import com.moulika.platform.productservice.bean.ProductFamily;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import java.util.HashSet;

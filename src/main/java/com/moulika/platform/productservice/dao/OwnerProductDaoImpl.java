@@ -1,7 +1,7 @@
-package com.mapp.platform.productservice.dao;
+package com.moulika.platform.productservice.dao;
 
-import com.mapp.platform.productservice.bean.dto.OwnerProductDto;
-import com.mapp.platform.productservice.dao.extractor.OwnerProductMapper;
+import com.moulika.platform.productservice.bean.dto.OwnerProductDto;
+import com.moulika.platform.productservice.dao.extractor.OwnerProductMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.jdbc.core.JdbcTemplate;

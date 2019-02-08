@@ -1,10 +1,10 @@
-package com.mapp.platform.productservice.controller;
+package com.moulika.platform.productservice.controller;
 
-import com.mapp.platform.productservice.exception.ErrorResponse;
-import com.mapp.platform.productservice.exception.ProductServiceException;
-import com.mapp.platform.productservice.service.ServiceSubSectorService;
-import com.mapp.platform.productservice.bean.ServiceIndustryGroup;
-import com.mapp.platform.productservice.bean.ServiceSubSector;
+import com.moulika.platform.productservice.exception.ErrorResponse;
+import com.moulika.platform.productservice.exception.ProductServiceException;
+import com.moulika.platform.productservice.service.ServiceSubSectorService;
+import com.moulika.platform.productservice.bean.ServiceIndustryGroup;
+import com.moulika.platform.productservice.bean.ServiceSubSector;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 

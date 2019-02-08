@@ -1,6 +1,6 @@
-package com.mapp.platform.productservice.dao;
+package com.moulika.platform.productservice.dao;
 
-import com.mapp.platform.productservice.bean.dto.OwnerProductDto;
+import com.moulika.platform.productservice.bean.dto.OwnerProductDto;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

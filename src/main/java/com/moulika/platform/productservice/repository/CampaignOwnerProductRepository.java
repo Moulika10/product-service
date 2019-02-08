@@ -1,6 +1,6 @@
-package com.mapp.platform.productservice.repository;
+package com.moulika.platform.productservice.repository;
 
-import com.mapp.platform.productservice.bean.CampaignOwnerProduct;
+import com.moulika.platform.productservice.bean.CampaignOwnerProduct;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;

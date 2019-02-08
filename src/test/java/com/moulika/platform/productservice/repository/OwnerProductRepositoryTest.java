@@ -1,11 +1,11 @@
-package com.mapp.platform.productservice.repository;
+package com.moulika.platform.productservice.repository;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-import com.mapp.platform.productservice.bean.OwnerProduct;
-import com.mapp.platform.productservice.bean.ProductBrick;
-import com.mapp.platform.productservice.bean.ProductClass;
-import com.mapp.platform.productservice.bean.ProductFamily;
+import com.moulika.platform.productservice.bean.OwnerProduct;
+import com.moulika.platform.productservice.bean.ProductBrick;
+import com.moulika.platform.productservice.bean.ProductClass;
+import com.moulika.platform.productservice.bean.ProductFamily;
 import java.util.List;
 import org.junit.Before;
 import org.junit.Test;

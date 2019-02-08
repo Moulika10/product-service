@@ -1,4 +1,4 @@
-package com.mapp.platform.productservice.controller;
+package com.moulika.platform.productservice.controller;
 
 import static org.hamcrest.collection.IsCollectionWithSize.hasSize;
 import static org.hamcrest.Matchers.is;
@@ -12,10 +12,10 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 import com.google.gson.Gson;
-import com.mapp.platform.productservice.bean.OwnerService;
-import com.mapp.platform.productservice.bean.dto.OwnerServiceDto;
-import com.mapp.platform.productservice.exception.ProductServiceException;
-import com.mapp.platform.productservice.service.OwnerServiceService;
+import com.moulika.platform.productservice.bean.OwnerService;
+import com.moulika.platform.productservice.bean.dto.OwnerServiceDto;
+import com.moulika.platform.productservice.exception.ProductServiceException;
+import com.moulika.platform.productservice.service.OwnerServiceService;
 
 import java.util.ArrayList;
 import java.util.HashMap;

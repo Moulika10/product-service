@@ -1,9 +1,9 @@
-package com.mapp.platform.productservice.controller;
+package com.moulika.platform.productservice.controller;
 
-import com.mapp.platform.productservice.bean.CampaignOwnerProduct;
-import com.mapp.platform.productservice.exception.ErrorResponse;
-import com.mapp.platform.productservice.exception.ProductServiceException;
-import com.mapp.platform.productservice.service.CampaignOwnerProductService;
+import com.moulika.platform.productservice.bean.CampaignOwnerProduct;
+import com.moulika.platform.productservice.exception.ErrorResponse;
+import com.moulika.platform.productservice.exception.ProductServiceException;
+import com.moulika.platform.productservice.service.CampaignOwnerProductService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.slf4j.Logger;

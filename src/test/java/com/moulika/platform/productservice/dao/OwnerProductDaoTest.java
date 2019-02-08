@@ -1,10 +1,10 @@
-package com.mapp.platform.productservice.dao;
+package com.moulika.platform.productservice.dao;
 
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
 import static org.mockito.Mockito.when;
 
-import com.mapp.platform.productservice.bean.dto.OwnerProductDto;
+import com.moulika.platform.productservice.bean.dto.OwnerProductDto;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;

@@ -1,6 +1,6 @@
-package com.mapp.platform.productservice.repository;
+package com.moulika.platform.productservice.repository;
 
-import com.mapp.platform.productservice.bean.ServiceSuperSector;
+import com.moulika.platform.productservice.bean.ServiceSuperSector;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 

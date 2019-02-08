@@ -1,4 +1,4 @@
-package com.mapp.platform.productservice.security;
+package com.moulika.platform.productservice.security;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;

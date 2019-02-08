@@ -1,6 +1,6 @@
-package com.mapp.platform.productservice.dao;
+package com.moulika.platform.productservice.dao;
 
-import com.mapp.platform.productservice.bean.dto.OwnerServiceDto;
+import com.moulika.platform.productservice.bean.dto.OwnerServiceDto;
 
 import java.util.List;
 

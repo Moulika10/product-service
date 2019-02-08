@@ -1,4 +1,4 @@
-package com.mapp.platform.productservice.security;
+package com.moulika.platform.productservice.security;
 
 import java.io.IOException;
 import java.io.InputStream;

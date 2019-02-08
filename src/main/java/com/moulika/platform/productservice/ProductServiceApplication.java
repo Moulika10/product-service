@@ -1,4 +1,4 @@
-package com.mapp.platform.productservice;
+package com.moulika.platform.productservice;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

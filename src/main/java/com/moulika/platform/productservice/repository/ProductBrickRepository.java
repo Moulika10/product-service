@@ -1,6 +1,6 @@
-package com.mapp.platform.productservice.repository;
+package com.moulika.platform.productservice.repository;
 
-import com.mapp.platform.productservice.bean.ProductBrick;
+import com.moulika.platform.productservice.bean.ProductBrick;
 
 import javax.transaction.Transactional;
 import org.springframework.data.jpa.repository.Query;

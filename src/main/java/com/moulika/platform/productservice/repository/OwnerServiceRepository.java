@@ -1,7 +1,7 @@
-package com.mapp.platform.productservice.repository;
+package com.moulika.platform.productservice.repository;
 
-import com.mapp.platform.productservice.bean.OwnerService;
-import com.mapp.platform.productservice.bean.dto.OwnerServiceDto;
+import com.moulika.platform.productservice.bean.OwnerService;
+import com.moulika.platform.productservice.bean.dto.OwnerServiceDto;
 
 import javax.transaction.Transactional;
 import java.util.List;

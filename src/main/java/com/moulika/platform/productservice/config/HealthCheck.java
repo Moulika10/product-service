@@ -1,4 +1,4 @@
-package com.mapp.platform.productservice.config;
+package com.moulika.platform.productservice.config;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;

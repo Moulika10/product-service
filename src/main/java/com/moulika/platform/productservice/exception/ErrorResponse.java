@@ -1,4 +1,4 @@
-package com.mapp.platform.productservice.exception;
+package com.moulika.platform.productservice.exception;
 
 public class ErrorResponse {
     private String message;

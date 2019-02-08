@@ -1,4 +1,4 @@
-package com.mapp.platform.productservice.bean;
+package com.moulika.platform.productservice.bean;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;

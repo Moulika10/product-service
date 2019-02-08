@@ -1,4 +1,4 @@
-package com.mapp.platform.productservice.security;
+package com.moulika.platform.productservice.security;
 
 import com.auth0.jwt.JWT;
 import com.auth0.jwt.algorithms.Algorithm;

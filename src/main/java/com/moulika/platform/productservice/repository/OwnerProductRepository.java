@@ -1,6 +1,6 @@
-package com.mapp.platform.productservice.repository;
+package com.moulika.platform.productservice.repository;
 
-import com.mapp.platform.productservice.bean.OwnerProduct;
+import com.moulika.platform.productservice.bean.OwnerProduct;
 
 import javax.transaction.Transactional;
 import java.util.List;

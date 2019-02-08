@@ -1,6 +1,6 @@
-package com.mapp.platform.productservice.dao.extractor;
+package com.moulika.platform.productservice.dao.extractor;
 
-import com.mapp.platform.productservice.bean.dto.OwnerProductDto;
+import com.moulika.platform.productservice.bean.dto.OwnerProductDto;
 import org.springframework.jdbc.core.RowMapper;
 import java.sql.ResultSet;
 import java.sql.SQLException;

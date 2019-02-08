@@ -1,10 +1,10 @@
-package com.mapp.platform.productservice.controller;
+package com.moulika.platform.productservice.controller;
 
-import com.mapp.platform.productservice.bean.dto.OwnerProductDto;
-import com.mapp.platform.productservice.exception.ErrorResponse;
-import com.mapp.platform.productservice.exception.ProductServiceException;
-import com.mapp.platform.productservice.service.OwnerProductService;
-import com.mapp.platform.productservice.bean.OwnerProduct;
+import com.moulika.platform.productservice.bean.dto.OwnerProductDto;
+import com.moulika.platform.productservice.exception.ErrorResponse;
+import com.moulika.platform.productservice.exception.ProductServiceException;
+import com.moulika.platform.productservice.service.OwnerProductService;
+import com.moulika.platform.productservice.bean.OwnerProduct;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import javax.validation.Valid;

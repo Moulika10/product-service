@@ -1,4 +1,4 @@
-package com.mapp.platform.productservice.exception;
+package com.moulika.platform.productservice.exception;
 
 public class ProductServiceException extends Exception {
     private static final long serialVersionUID = 1L;

@@ -1,4 +1,4 @@
-package com.mapp.platform.productservice.security;
+package com.moulika.platform.productservice.security;
 
 import com.auth0.jwt.interfaces.DecodedJWT;
 import com.fasterxml.jackson.databind.ObjectMapper;

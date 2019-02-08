@@ -1,4 +1,4 @@
-package com.mapp.platform.productservice.security;
+package com.moulika.platform.productservice.security;
 
 import static org.hamcrest.Matchers.is;
 import static org.hamcrest.core.IsNull.notNullValue;

@@ -1,4 +1,4 @@
-package com.mapp.platform.productservice.config;
+package com.moulika.platform.productservice.config;
 
 import static springfox.documentation.builders.PathSelectors.any;
 import org.springframework.context.annotation.Bean;

@@ -1,10 +1,10 @@
-package com.mapp.platform.productservice.service;
+package com.moulika.platform.productservice.service;
 
 import static org.junit.Assert.assertEquals;
 import static org.mockito.Mockito.when;
 
-import com.mapp.platform.productservice.bean.ServiceIndustryGroup;
-import com.mapp.platform.productservice.repository.ServiceIndustryGroupRepository;
+import com.moulika.platform.productservice.bean.ServiceIndustryGroup;
+import com.moulika.platform.productservice.repository.ServiceIndustryGroupRepository;
 import java.util.ArrayList;
 import java.util.List;
 import org.junit.Before;
