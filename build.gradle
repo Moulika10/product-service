@@ -1,0 +1,146 @@
+import org.apache.tools.ant.filters.ReplaceTokens
+
+buildscript {
+    ext {
+        buildNumber = project.hasProperty("buildNumber") ? project.getProperty("buildNumber") : new Date().format('yyyyMMddHHmmss')
+        springBootVersion = '2.0.4.RELEASE'
+    }
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+        classpath "org.sonarsource.scanner.gradle:sonarqube-gradle-plugin:1.2"
+    }
+}
+plugins {
+    id 'org.sonarqube' version '2.5'
+}
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'org.springframework.boot'
+apply plugin: 'io.spring.dependency-management'
+apply plugin: 'jacoco'
+apply plugin: 'org.sonarqube'
+
+group = 'com.mapp.product.service'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'org.springframework.boot:spring-boot-starter-jdbc'
+    compile 'org.flywaydb:flyway-core:4.2.0'
+    compile 'org.springframework.boot:spring-boot-starter-actuator'
+    compile 'org.postgresql:postgresql:42.1.1'
+    compile 'io.springfox:springfox-swagger2:2.7.0'
+	compile 'io.springfox:springfox-swagger-ui:2.7.0'
+    compile 'org.springframework.boot:spring-boot-starter-web'
+    compile 'org.springframework.boot:spring-boot-starter-data-jpa'
+    compile 'com.google.code.gson:gson:2.8.5'
+    compile 'org.springframework.boot:spring-boot-starter-security'
+    compile 'org.projectlombok:lombok:1.16.10'
+    compile 'com.auth0:java-jwt:3.4.0'
+    compile 'io.jsonwebtoken:jjwt:0.6.0'
+    compile 'org.bouncycastle:bcprov-jdk15on:1.59'
+
+    runtime 'org.springframework.boot:spring-boot-devtools'
+
+    testCompile 'org.springframework.boot:spring-boot-starter-test'
+    testCompile 'io.rest-assured:spring-mock-mvc:3.0.3'
+    testCompile 'io.rest-assured:rest-assured:3.0.2'
+    testCompile 'com.h2database:h2:1.4.197'
+}
+
+//TODO will add test cases later for bean toString(), equals() and hashCode() methods
+def coverageExcludedClasses = [
+    'com/mapp/platform/productservice/ProductServiceApplication.class',
+    'com/mapp/platform/productservice/bean/**',
+    'com/mapp/platform/productservice/config/**',
+    'com/mapp/platform/productservice/dao/**',
+    'com/mapp/platform/productservice/exception/**',
+    'com/mapp/platform/productservice/security/SecurityConfiguration.class'
+]
+
+jacocoTestReport {
+    reports {
+        html.enabled true
+        html.destination "${testReportDir}/jacoco"
+    }
+
+    afterEvaluate {
+        classDirectories = files(classDirectories.files.collect {
+            fileTree(dir: it, excludes: coverageExcludedClasses )
+        })
+    }
+}
+test.finalizedBy(project.tasks.jacocoTestReport)
+
+/** Initiate Sonar Analysis */
+sonarqube {
+    properties{
+        property 'sonar.login', "81c9df01c00d09e1592dcbd476cfe9c19d175ecc"
+        property 'sonar.projectVersion', getWorkingBranch() + "-$project.version-$project.buildNumber"
+        property 'sonar.projectKey', getSonarProjectKey()
+        property 'sonar.projectName', "${projectName}"
+        property 'sonar.coverage.exclusions', convertCoverageExcludeListToString(coverageExcludedClasses)
+        property 'sonar.core.codeCoveragePlugin', 'jacoco'
+        property 'sonar.jacoco.reportPaths', "${buildDir}/jacoco/test.exec"
+        property 'sonar.surefire.reportsPath', "${buildDir}/reports/tests"
+        property 'sonar.host.url', "${sonarURL}"
+        property 'sonar.exclusions', "${sonarExclusions}"
+    }
+}
+
+processResources {
+    filter ReplaceTokens, tokens: [
+            "buildNumber": project.property("buildNumber"),
+            "projectName": project.property("projectName")
+    ]
+}
+
+/**
+ * Takes a list of string(regex which is accepted by jacoco) and returns a string combining all regexes with
+ * prefix path and , appended to them.(i.e string format accepted by sonar)
+ *
+ * @param excludedClasses list of string(regex which is accepted by jacoco)
+ * @return convert exclude coverage list to format accepted by sonar
+ */
+static def convertCoverageExcludeListToString(excludedClasses) {
+    def expandedExcludedClasses = []
+    excludedClasses.each {
+        expandedExcludedClasses.add("src/main/java/${it}")
+    }
+    return expandedExcludedClasses.join(", ")
+}
+
+/**
+ * Sonar keys are <group>:<project> unless it is a feature branch and then the string 'feature' is appended.
+ * All feature branches will resolve to one sonar entry/report.
+ */
+def getSonarProjectKey() {
+    def workingBranch = getWorkingBranch()
+    def projectKey = "${projectName}"
+    return (workingBranch == 'develop' || workingBranch == 'master'
+            || workingBranch.toString().contains("release")) ? projectKey : "${projectKey}:feature"
+}
+
+/**
+ * Get the name of the working branch of the project
+ *
+ * @return Name of the working branch
+ */
+def getWorkingBranch() {
+    // Triple double-quotes for the breaklines
+    def workingBranch = project.hasProperty('buildBranch') ?
+            project.getProperty('buildBranch') :
+            """git --git-dir=${rootDir}/.git
+                               --work-tree=${rootDir}
+                               rev-parse --abbrev-ref HEAD""".execute().text.trim()
+    //print 'Working branch: ' + workingBranch
+    return workingBranch
+}
