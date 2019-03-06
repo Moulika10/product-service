@@ -1,7 +1,7 @@
-package com.mapp.platform.productservice.service;
+package com.moulika.platform.productservice.service;
 
-import com.mapp.platform.productservice.bean.ProductClass;
-import com.mapp.platform.productservice.repository.ProductClassRepository;
+import com.moulika.platform.productservice.bean.ProductClass;
+import com.moulika.platform.productservice.repository.ProductClassRepository;
 import java.util.List;
 import org.springframework.stereotype.Service;
 

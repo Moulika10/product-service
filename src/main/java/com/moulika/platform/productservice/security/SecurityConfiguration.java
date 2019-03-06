@@ -36,12 +36,20 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
             .and()
             .csrf().disable()
             .authorizeRequests()
-            .antMatchers( "/v1/**").hasAuthority("openId");
+                /**
+                 * Uncomment this line when we you have OAuthServer
+                 */
+//            .antMatchers( "/v1/**").hasAuthority("openId");
+                /**
+                 * Comment this line when we you have OAuthServer
+                 * as no oauth Server permitting all
+                 */
+            .antMatchers( "/v1/**").permitAll();
 
-        http.addFilterBefore(
-                new JwtAuthenticationTokenFilter(
-                        new JwtTokenVerifier()),
-                BasicAuthenticationFilter.class);
+//        http.addFilterBefore(
+//                new JwtAuthenticationTokenFilter(
+//                        new JwtTokenVerifier()),
+//                BasicAuthenticationFilter.class);
     }
 
 }

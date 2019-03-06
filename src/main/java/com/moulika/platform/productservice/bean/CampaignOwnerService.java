@@ -16,7 +16,6 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.ManyToOne;
 import javax.persistence.JoinColumn;
 
-@SuppressWarnings("unused")
 @Entity
 @Table(name = "campaign_owner_service", schema = "product_service")
 public class CampaignOwnerService {

@@ -1,11 +1,11 @@
-package com.mapp.platform.productservice.service;
+package com.moulika.platform.productservice.service;
 
-import com.mapp.platform.productservice.dao.OwnerProductDaoImpl;
-import com.mapp.platform.productservice.bean.OwnerProduct;
-import com.mapp.platform.productservice.bean.dto.OwnerProductDto;
-import com.mapp.platform.productservice.bean.ProductBrick;
-import com.mapp.platform.productservice.exception.ProductServiceException;
-import com.mapp.platform.productservice.repository.OwnerProductRepository;
+import com.moulika.platform.productservice.dao.OwnerProductDaoImpl;
+import com.moulika.platform.productservice.bean.OwnerProduct;
+import com.moulika.platform.productservice.bean.dto.OwnerProductDto;
+import com.moulika.platform.productservice.bean.ProductBrick;
+import com.moulika.platform.productservice.exception.ProductServiceException;
+import com.moulika.platform.productservice.repository.OwnerProductRepository;
 import java.util.List;
 import org.springframework.stereotype.Service;
 

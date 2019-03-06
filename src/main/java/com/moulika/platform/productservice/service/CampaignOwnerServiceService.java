@@ -1,9 +1,9 @@
-package com.mapp.platform.productservice.service;
+package com.moulika.platform.productservice.service;
 
-import com.mapp.platform.productservice.bean.CampaignOwnerService;
-import com.mapp.platform.productservice.bean.OwnerService;
-import com.mapp.platform.productservice.exception.ProductServiceException;
-import com.mapp.platform.productservice.repository.CampaignOwnerServiceRepository;
+import com.moulika.platform.productservice.bean.CampaignOwnerService;
+import com.moulika.platform.productservice.bean.OwnerService;
+import com.moulika.platform.productservice.exception.ProductServiceException;
+import com.moulika.platform.productservice.repository.CampaignOwnerServiceRepository;
 import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.Objects;
