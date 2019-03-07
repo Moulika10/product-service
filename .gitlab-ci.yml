@@ -1,0 +1,22 @@
+image: java:8
+
+stages:
+  - build
+  - deploy
+
+build:
+  stage: build
+  script:
+    - "./gradlew clean build"
+  artifacts:
+    paths:
+      - build/libs/product-service*.jar
+
+production:
+  stage: deploy
+  script:
+    - curl --location "https://cli.run.pivotal.io/stable?release=linux64-binary&source=github" | tar zx
+    - ./cf login -u $CF_USERNAME -p $CF_PASSWORD -a api.run.pivotal.io
+    - ./cf push
+  only:
+    - master

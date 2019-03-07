@@ -1,0 +1,6 @@
+---
+applications:
+  - name: product-service
+    random-route: true
+    memory: 1G
+    path: build/libs/product-service*.jar
